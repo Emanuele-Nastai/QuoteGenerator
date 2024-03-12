@@ -1,18 +1,17 @@
 import type { MetaFunction } from "@remix-run/node";
-import { Form } from "@remix-run/react";
+import SearchForm from "./SearchForm"
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
+    { title: "Quote Generato" },
     { name: "description", content: "Welcome to Remix!" },
   ];
 };
 
+
+
 export default function Index() {
   return (
-    <Form action="/events" method="post">
-      <input name="title" type="text" />
-      <button>Cerca</button>  
-    </Form>
+    <SearchForm/>
   );
 }
