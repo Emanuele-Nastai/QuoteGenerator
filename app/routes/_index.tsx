@@ -3,12 +3,10 @@ import SearchForm from "./SearchForm"
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "Quote Generato" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "Quote Generator" },
+    { name: "description", content: "Generate some famous quotes based on a topic!" },
   ];
 };
-
-
 
 export default function Index() {
   return (
