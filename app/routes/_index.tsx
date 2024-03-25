@@ -1,5 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
-import SearchForm from "./SearchForm"
+import SearchForm from "./SearchForm";
+import { Stack, Container, Skeleton, Image } from '@mantine/core';
+import { useViewportSize } from '@mantine/hooks';
 
 export const meta: MetaFunction = () => {
   return [
@@ -9,7 +11,19 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
+const { width } = useViewportSize();
+
   return (
-    <SearchForm/>
+      <Stack h={100}>
+        <Image
+      h={160}
+      src="https://fabriziocaramagna.com/wp-content/uploads/2022/05/Sfocato-1024x736.jpg"
+    />
+        <SearchForm/>
+        <Image
+      h={150}
+      src="https://fabriziocaramagna.com/wp-content/uploads/2022/05/Sfocato-1024x736.jpg"
+    />
+      </Stack>
   );
 }
